@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View style="@style/C_Line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/focus_sort_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/focus_sort"
+                    style="@style/C_121"
+                    android:text="@string/focus_sort" />
+
+                <ImageView
+                    android:id="@+id/focus_sort_up_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/focus_sort"
+                    android:src="@mipmap/sort_up_unselected"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/focus_sort_down_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/focus_sort_up_image"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/focus_sort"
+                    android:src="@mipmap/sort_down_selected"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/register_fund_sort_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/register_fund_sort"
+                    style="@style/C_121"
+                    android:text="@string/fund_sort" />
+
+                <ImageView
+                    android:id="@+id/vArrowFund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/register_fund_sort"
+                    android:src="@drawable/selector_sanjiao" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/register_fund_sort_up_image"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@id/register_fund_sort"-->
+                <!--android:src="@mipmap/sort_up_unselected"-->
+                <!--android:visibility="gone" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/register_fund_sort_down_image"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/register_fund_sort_up_image"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:layout_toRightOf="@id/register_fund_sort"-->
+                <!--android:src="@mipmap/sort_down_unselected"-->
+                <!--android:visibility="gone" />-->
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/register_time_sort_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/register_time_sort"
+                    style="@style/C_121"
+                    android:text="@string/time_sort" />
+
+                <ImageView
+                    android:id="@+id/vArrowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/register_fund_sort"
+                    android:src="@drawable/selector_sanjiao" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/register_time_sort_up_image"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@id/register_time_sort"-->
+                <!--android:src="@mipmap/sort_up_unselected" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/register_time_sort_down_image"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/register_time_sort_up_image"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:layout_toRightOf="@id/register_time_sort"-->
+                <!--android:src="@mipmap/sort_down_unselected" />-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF">
+
+            <include
+                android:id="@+id/vHeader"
+                layout="@layout/view_list_header" />
+
+            <com.jusfoun.jusfouninquire.ui.view.XListView
+                android:id="@+id/search_result_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/vHeader"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/look_any"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleView"
+        android:layout_marginTop="1dp"
+        android:background="#FFF"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:src="@drawable/img_search_no_data" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="搜索无结果"
+            android:textColor="#999"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

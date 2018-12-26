@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/wechat_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/wechat_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/app_wechat_icon"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wechat_image"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:text="微信" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/friend_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp">
+
+            <ImageView
+                android:id="@+id/frienders_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/friend_circle"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frienders_image"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:text="朋友圈" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sina_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/sina_Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/app_sina_icon"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sina_Image"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:text="新浪" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+    <TextView
+        android:id="@+id/close_shareBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relative_layout_height"
+        android:background="@drawable/selector_common_list"
+        android:gravity="center"
+        android:text="关闭"
+        android:textColor="#646464"
+        android:textSize="16dp" />
+</LinearLayout>

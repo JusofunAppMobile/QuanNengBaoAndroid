@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_login1"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="41dp"
+            android:layout_marginTop="86dp"
+            android:src="@drawable/img_login_logo" />
+
+
+        <LinearLayout
+            android:id="@+id/vBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_corner"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="23dp">
+
+            <LinearLayout
+                android:id="@+id/accountLayout"
+                style="@style/C_100">
+
+                <ImageView
+                    style="@style/C_101"
+                    android:src="@drawable/img_accout" />
+
+                <View style="@style/C_Ver_Line" />
+
+                <EditText
+                    android:id="@+id/accountEdit"
+                    style="@style/C_103"
+                    android:hint="请输入您的账号" />
+            </LinearLayout>
+
+            <com.jusfoun.jusfouninquire.ui.view.LineScaleView
+                android:id="@+id/vLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/passwordLayout"
+                style="@style/C_100"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/ivAc"
+                    style="@style/C_101"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/img_lock" />
+
+                <View
+                    android:id="@+id/vL"
+                    style="@style/C_Ver_Line"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/ivAc" />
+
+                <EditText
+                    android:id="@+id/passwordEdit"
+                    style="@style/C_103"
+                    android:layout_width="0dp"
+                    android:layout_toRightOf="@id/vL"
+                    android:layout_weight="1"
+                    android:hint="请输入您的密码"
+                    android:inputType="textPassword" />
+
+                <ImageView
+                    android:id="@+id/vEye"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="6dp"
+                    android:src="@drawable/selector_eye" />
+
+            </LinearLayout>
+
+            <com.jusfoun.jusfouninquire.ui.view.LineScaleView
+                android:id="@+id/vLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/register_forgerpwd_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passwordLayout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/forget_pwd_text_btn"
+                    style="@style/C_104"
+                    android:text="忘记密码" />
+
+                <TextView
+                    android:id="@+id/register_text_btn"
+                    style="@style/C_104"
+                    android:layout_alignParentRight="true"
+                    android:text="注册" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            style="@style/C_Common_Bt"
+            android:layout_width="180dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/selector_login_bt"
+            android:text="登  录"
+            android:layout_marginTop="50dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/vShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="53dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/wechat_Text_btn"
+                style="@style/C_105"
+                android:src="@drawable/img_shape_wechat" />
+
+            <View
+                android:id="@+id/view_third_login"
+                style="@style/C_Ver_Line"
+                android:layout_marginLeft="68dp"
+                android:layout_marginRight="68dp" />
+
+            <ImageView
+                android:id="@+id/weibo_Text_btn"
+                style="@style/C_105"
+                android:src="@drawable/img_share_sina" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.jusfoun.jusfouninquire.ui.view.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
